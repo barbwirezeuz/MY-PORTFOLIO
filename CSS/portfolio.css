@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Ubuntu+Condensed&display=swap');
+
+* {
+    margin: 0; padding: 0;
+}
+
+:root {
+    --primary-color: #152238;
+    --text-color: #707070;
+    --prime-color: #fff;
+    --free-color:#cea504 ;
+    --main-color: #ddd;
+}
+
+body {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    /* background: var(--text-color); */
+}
+
+.background {
+    /* background: var(--primary-color); */
+    /* margin: 30px; */
+    height: 100vh;
+    border-radius: 5px;
+}
+
+.background h1 {
+    display: flex;
+    justify-content: center;
+    font-stretch: expanded;
+    font-variant: small-caps;
+    font-size: x-large;
+    padding-top: 40px;
+    border-bottom: 3px solid var(--free-color);
+}
+
+.background .grid-bck {
+    padding: 20px;
+}
+
+.grid-class:nth-of-type(1){
+    grid-column: 1/2;
+}
+
+.background .grid-bck ,.grid-class {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,  minmax(250px, 1fr));
+    color: var(--primary-color);
+    gap: 16px;
+}
+
+.grid-class {
+    text-align: center;
+    padding: 30px 15px;
+    background: var(--primary-color);
+    color: var(--prime-color);
+    border-radius: 6px;
+    transition: 0.7s;
+}
+
+.grid-class .imagex:hover,
+.grid-class .h2:hover .text,
+.grid-class:hover {
+    transform: scale(1.05);
+    color: var(--free-color);
+}
+
+.grid-class .imagex {
+    justify-self: center;
+    height: 50px;
+    padding: 5px;
+    background: var(--free-color);
+    border-radius: 5px;
+}
+
+.grid-class .imagex:hover {
+    background: var(--prime-color);
+}
+
+footer {
+  
+}
+
+button{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    border: none;
+    background: var(--primary-color);
+    height: 50px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    transition: 4s;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+}
+
+button h3 {
+    color: var(--prime-color);
+    font-stretch: expanded;
+    font-variant: small-caps;
+    font-weight: 900;
+    font-size: small;
+}
+
+
+button:hover {
+    /* transform: translateX(10px); */
+    /* transform: rotate(10deg); */
+}
+
+button .my-icons {
+    color: var(--prime-color);
+    padding-right: 10px;
+    font-size: 2em;
+}
+
+
