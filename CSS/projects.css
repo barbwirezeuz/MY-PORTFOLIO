@@ -19,7 +19,7 @@ body {
 }
 
 .buts h5 {
-    color: #f9f9f9;
+    color: #152238;
 }
 
 .buts a {
@@ -30,14 +30,16 @@ body {
     padding: 7px;
     display: flex;
     flex-direction: row;
+    justify-content: end;
     gap: 8px;
-    background-color: #152238;
+    color: #152238;
 }
 
 .portfolio {
     background-color: #f9f9f9;
     padding: 40px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .portfolio h2 {
