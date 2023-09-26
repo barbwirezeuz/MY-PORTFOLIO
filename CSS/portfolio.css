@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Ubuntu+Condensed&display=swap');
 
 * {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 :root {
@@ -13,75 +15,92 @@
 }
 
 body {
+    padding: 20px;
     font-family: 'Ubuntu Condensed', sans-serif;
-    /* background: var(--text-color); */
+}
+
+.buts h5 {
+    color: #152238;
+}
+
+.buts a {
+    text-decoration: none;
+}
+
+.buts {
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: end;
 }
 
 .background {
-    /* background: var(--primary-color); */
-    /* margin: 30px; */
-    height: 100vh;
-    border-radius: 5px;
+    padding: 40px;
+    text-align: center;
 }
 
 .background h1 {
-    display: flex;
-    justify-content: center;
     font-stretch: expanded;
     font-variant: small-caps;
     font-size: x-large;
-    padding-top: 40px;
     border-bottom: 3px solid var(--free-color);
-}
-
-.background .grid-bck {
-    padding: 20px;
-}
-
-.grid-class:nth-of-type(1){
-    grid-column: 1/2;
-}
-
-.background .grid-bck ,.grid-class {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,  minmax(250px, 1fr));
+    margin-bottom: 20px;
     color: var(--primary-color);
-    gap: 16px;
+}
+
+.grid-bck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
 }
 
 .grid-class {
     text-align: center;
-    padding: 30px 15px;
     background: var(--primary-color);
     color: var(--prime-color);
     border-radius: 6px;
-    transition: 0.7s;
-}
-
-.grid-class .imagex:hover,
-.grid-class .h2:hover .text,
-.grid-class:hover {
-    transform: scale(1.05);
-    color: var(--free-color);
+    transition: transform 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .grid-class .imagex {
-    justify-self: center;
     height: 50px;
-    padding: 5px;
     background: var(--free-color);
-    border-radius: 5px;
+    padding: 5px;
+    border-radius: 50%;
 }
 
-.grid-class .imagex:hover {
-    background: var(--prime-color);
+.grid-class .h2 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.grid-class .text {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.grid-class:hover {
+    transform: scale(1.05);
+    background: var(--free-color);
+    color: var(--primary-color);
 }
 
 footer {
-  
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-button{
+
+button {
     font-family: 'Ubuntu Condensed', sans-serif;
     border: none;
     background: var(--primary-color);
@@ -91,11 +110,9 @@ button{
     border-radius: 5px;
     margin-bottom: 50px;
     margin-left: 50px;
-    transition: 4s;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; */
+    transition: background-color 0.4s;
+    margin-top: 20px;
+
 }
 
 button h3 {
@@ -106,10 +123,9 @@ button h3 {
     font-size: small;
 }
 
-
 button:hover {
-    /* transform: translateX(10px); */
-    /* transform: rotate(10deg); */
+    background: var(--free-color);
+    color: var(--primary-color);
 }
 
 button .my-icons {
@@ -118,4 +134,19 @@ button .my-icons {
     font-size: 2em;
 }
 
-
+/* Media Query for Tablet and Desktop */
+@media (min-width: 768px) {
+    .grid-class {
+        text-align: center;
+        background: var(--primary-color);
+        color: var(--prime-color);
+        border-radius: 6px;
+        transition: transform 0.7s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+}
